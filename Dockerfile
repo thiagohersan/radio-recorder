@@ -1,7 +1,9 @@
 FROM debian:stretch
 
 RUN apt-get update
-RUN apt-get install -y wget streamripper > /dev/null 2>&1
+RUN apt-get install -y python python-pip wget streamripper > /dev/null 2>&1
+
+RUN pip install awscli
 
 RUN mkdir -p /opt/radio-recorder/out
 WORKDIR /opt/radio-recorder
