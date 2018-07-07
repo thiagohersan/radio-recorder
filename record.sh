@@ -15,4 +15,6 @@ streamripper 'http://icestreaming.rai.it/1.mp3' -u 'iTunes/4.7 (Macintosh; N; PP
 streamripper 'http://radiomars.ice.infomaniak.ch/radiomars-128.mp3' -u 'iTunes/4.7 (Macintosh; N; PPC)' \
 -a %S%q -l 30 -s -d ./out
 
+rm -rf ./out/*.cue ./out/incomplete
+
 aws s3 cp --recursive ./out s3://$AWS_S3_BUCKET/out/ --region us-east-1
