@@ -45,7 +45,8 @@ streamripper 'http://icestreaming.rai.it/1.mp3' -u 'iTunes/4.7 (Macintosh; N; PP
 streamripper 'http://radiomars.ice.infomaniak.ch/radiomars-128.mp3' -u 'iTunes/4.7 (Macintosh; N; PPC)' -A -a %S%q -l 8000 -s -d ./out
 
 rm -rf ./out/*.cue ./out/incomplete
+find ./out -size 0 | xargs rm -rf
 
-aws s3 cp --recursive ./out s3://$AWS_S3_BUCKET/out/ --region us-east-1
-
-sleep 24h
+MDATE=$(date +%Y%m%d_%H%M%S)
+mv out out-$MDATE
+zip -r out-$MDATE.zip out-$MDATE
