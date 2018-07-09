@@ -32,6 +32,32 @@ streamripper 'http://icecast-streaming.nice264.com/mallorca?.mp3' -u 'iTunes/4.7
 
 streamripper 'http://icestreaming.rai.it/1.mp3' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a rai_%q -l 8000 -s -d ./out &
 
+streamripper 'http://149.202.214.27:8888/radiotirana1' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a tirana_%q -l 8000 -s -d ./out &
+
+streamripper 'http://radios.vpn.sapo.pt/AO/radio5.mp3' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a sapo_%q -l 8000 -s -d ./out &
+
+streamripper 'http://mp3.metroaudio1.stream.avstreaming.net:7200/bluefmaudio1' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a bluefmaudio1_%q -l 8000 -s -d ./out &
+
+streamripper 'http://streaming.radioblogfm.net:8002/listen.pls' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a blogfm_%q -l 8000 -s -d ./out &
+
+streamripper 'http://s2.netradiofm.com:9024/listen.pls' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a signos_%q -l 8000 -s -d ./out &
+
+streamripper 'http://live02.rfi.fr/rfiafrique-64.mp3' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a rfi_%q -l 8000 -s -d ./out &
+
+streamripper 'http://icecast.vrtcdn.be/radio1-high.mp3' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a vrt_%q -l 8000 -s -d ./out &
+
+streamripper 'http://streaming06.hstbr.net:8202/live' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a globo_%q -l 8000 -s -d ./out &
+
+streamripper 'http://uk4-vn.mixstream.net:8142/;' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a balafon_%q -l 8000 -s -d ./out &
+
+streamripper 'https://streams.radio.co/s419eaa350/listen' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a columbia_%q -l 8000 -s -d ./out &
+
+streamripper 'http://s2.voscast.com:11280/stream/1/' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a ubfm_%q -l 8000 -s -d ./out &
+
+streamripper 'https://chai5she.cdn.dvmr.fr/rmcinfo' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a rmc_%q -l 8000 -s -d ./out &
+
+streamripper 'http://mp3lg3.scdn.arkena.com/10489/europe1.mp3' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a europe1_%q -l 8000 -s -d ./out &
+
 streamripper 'http://radiomars.ice.infomaniak.ch/radiomars-128.mp3' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a radiomars_%q -l 8000 -s -d ./out
 
 rm -rf ./out/*.cue ./out/incomplete
