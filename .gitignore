@@ -1,6 +1,2 @@
 .DS*
-*.bin
-.parameters
-.env
-parameters.h
-out/
+out*
