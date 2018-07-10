@@ -92,7 +92,11 @@ streamripper 'https://d1a7butsko8nkd.cloudfront.net/sport.mp3' -u 'iTunes/4.7 (M
 
 streamripper 'http://aler.org:8000/caracasam.aac' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a caracasam_%q -l 9000 -s -d ./out &
 
+streamripper 'http://37.247.100.118/stream/70/' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a 37247_%q -l 9000 -s -d ./out &
+
 streamripper 'http://radiomars.ice.infomaniak.ch/radiomars-128.mp3' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a radiomars_%q -l 9000 -s -d ./out
+
+sleep 1m
 
 rm -rf ./out/*.cue ./out/incomplete
 find ./out -size 0 | xargs -d '\n' rm -rf
