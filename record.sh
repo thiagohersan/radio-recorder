@@ -90,6 +90,10 @@ streamripper 'http://aler.org:8000/caracasam.aac' -u 'iTunes/4.7 (Macintosh; N; 
 
 streamripper 'http://37.247.100.118/stream/70/' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a 37247_%q -l 9000 -s -d ./out &
 
+streamripper 'https://radios.rtbf.be/vivabxl-64.aac' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a rtbf_%q -l 9000 -s -d ./out &
+
+streamripper 'http://stream4.nadaje.com:13812/ujotfm128' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a nadaje_%q -l 9000 -s -d ./out &
+
 streamripper 'http://radiomars.ice.infomaniak.ch/radiomars-128.mp3' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a radiomars_%q -l 9000 -s -d ./out
 
 rm -rf ./out/*.cue ./out/incomplete
