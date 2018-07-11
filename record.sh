@@ -92,8 +92,6 @@ streamripper 'http://37.247.100.118/stream/70/' -u 'iTunes/4.7 (Macintosh; N; PP
 
 streamripper 'http://radiomars.ice.infomaniak.ch/radiomars-128.mp3' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a radiomars_%q -l 9000 -s -d ./out
 
-sleep 1m
-
 rm -rf ./out/*.cue ./out/incomplete
 find ./out -size 0 | xargs -d '\n' rm -rf
 
@@ -101,4 +99,5 @@ MDATE=$(date +%Y%m%d_%H%M%S)
 mv out out-$MDATE
 zip -r out-$MDATE.zip out-$MDATE
 
+source env.sh
 aws s3 cp out-$MDATE.zip s3://$AWS_S3_BUCKET/ --region us-east-1
