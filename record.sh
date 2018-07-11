@@ -90,14 +90,36 @@ streamripper 'https://radios.rtbf.be/vivabxl-64.aac' -u 'iTunes/4.7 (Macintosh; 
 
 streamripper 'http://stream4.nadaje.com:13812/ujotfm128' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a nadaje_%q -l 12000 -s -d ./out &
 
+streamripper 'https://rbb-inforadio-live.sslcast.addradio.de/rbb/inforadio/live/mp3/128/stream.mp3' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a rbb_%q -l 12000 -s -d ./out &
+
+streamripper 'http://ch3.ice.infomaniak.ch/ch3-64.aac' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a infomaniak_%q -l 12000 -s -d ./out &
+
+streamripper 'http://audio.bustream.com:8062/stream' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a bustream_%q -l 12000 -s -d ./out &
+
+streamripper 'http://server1.dainusradio.com:9976/listen.pls' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a dainusradio_%q -l 12000 -s -d ./out &
+
+streamripper 'http://s2.netradiofm.com:9008/;' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a netradiofm_%q -l 12000 -s -d ./out &
+
+streamripper 'http://167.114.219.240:8088/stream' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a 167114_%q -l 12000 -s -d ./out &
+
+streamripper 'http://str.radiocapital.fm:8000/;' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a radiocapital_%q -l 12000 -s -d ./out &
+
+streamripper 'http://www.boliviastreaming.com:7002/;' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a boliviastreaming_%q -l 12000 -s -d ./out &
+
+streamripper 'http://stream5.eltelon.com/austral-am.aac' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a eltelon_%q -l 12000 -s -d ./out &
+
+streamripper 'http://20073.live.streamtheworld.com/PROGRAM2_SC' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a PROGRAM2_%q -l 12000 -s -d ./out &
+
+streamripper 'http://rac1.radiocat.net/;' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a radiocat_%q -l 12000 -s -d ./out &
+
 streamripper 'http://radiomars.ice.infomaniak.ch/radiomars-128.mp3' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a radiomars_%q -l 12000 -s -d ./out
 
 rm -rf ./out/*.cue ./out/incomplete
 find ./out -size 0 | xargs -d '\n' rm -rf
 
-MDATE=$(date +%Y%m%d_%H%M%S)_$RANDOM
+MDATE=$(date +%Y%m%d_%H%M%S)-$RANDOM
 mv out out-$MDATE
 zip -r out-$MDATE.zip out-$MDATE
 
 source env.sh
-aws s3 cp out-$MDATE.zip s3://$AWS_S3_BUCKET/ --region us-east-1
+## aws s3 cp out-$MDATE.zip s3://$AWS_S3_BUCKET/ --region us-east-1
