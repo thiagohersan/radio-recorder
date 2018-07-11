@@ -95,7 +95,7 @@ streamripper 'http://radiomars.ice.infomaniak.ch/radiomars-128.mp3' -u 'iTunes/4
 rm -rf ./out/*.cue ./out/incomplete
 find ./out -size 0 | xargs -d '\n' rm -rf
 
-MDATE=$(date +%Y%m%d_%H%M%S)
+MDATE=$(date +%Y%m%d_%H%M%S)_$RANDOM
 mv out out-$MDATE
 zip -r out-$MDATE.zip out-$MDATE
 
