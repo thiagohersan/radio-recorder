@@ -66,8 +66,6 @@ streamripper 'http://video.tvr.by:8000/radio1' -u 'iTunes/4.7 (Macintosh; N; PPC
 
 streamripper 'http://79.143.184.143:8000/listen.pls' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a 79143_%q -l 9000 -s -d ./out &
 
-streamripper 'http://sh2.upx.com.br:8012/listen.pls' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a upx_%q -l 9000 -s -d ./out &
-
 streamripper 'http://unlimited1-us.dps.live/cooperativafm/mp3/icecast.audio' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a cooperativafm_%q -l 9000 -s -d ./out &
 
 streamripper 'http://rs1.radiostreamer.com:8000/;stream/1' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a rs1_%q -l 9000 -s -d ./out &
@@ -77,8 +75,6 @@ streamripper 'https://icecast.teveo.icrt.cu/kHKL7tWd' -u 'iTunes/4.7 (Macintosh;
 streamripper 'https://drradio3-lh.akamaihd.net/i/p3_9@143506/index_256_a-p.m3u8' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a drradio3_%q -l 9000 -s -d ./out &
 
 streamripper 'http://icecast-streaming.nice264.com/ondaceroback' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a ondacero_%q -l 9000 -s -d ./out &
-
-streamripper 'http://sip-live.hds.adaptive.level3.net/hls-live/ruv-ras2/_definst_/live/stream1.m3u8' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a ruvras2_%q -l 9000 -s -d ./out &
 
 streamripper 'http://19253.live.streamtheworld.com/W_RADIOAAC.aac' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a W_RADIOAAC_%q -l 9000 -s -d ./out &
 
@@ -104,3 +100,5 @@ find ./out -size 0 | xargs -d '\n' rm -rf
 MDATE=$(date +%Y%m%d_%H%M%S)
 mv out out-$MDATE
 zip -r out-$MDATE.zip out-$MDATE
+
+aws s3 cp out-$MDATE.zip s3://$AWS_S3_BUCKET/ --region us-east-1
