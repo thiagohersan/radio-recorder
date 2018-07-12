@@ -40,6 +40,8 @@ streamripper 'http://mp3.metroaudio1.stream.avstreaming.net:7200/bluefmaudio1' -
 
 streamripper 'http://streaming.radioblogfm.net:8002/listen.pls' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a blogfm_%q -l 12000 -s -d ./out &
 
+streamripper 'http://s2.netradiofm.com:9024/listen.pls' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a signos_%q -l 12000 -s -d ./out &
+
 streamripper 'http://live02.rfi.fr/rfiafrique-64.mp3' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a rfi_%q -l 12000 -s -d ./out &
 
 streamripper 'http://icecast.vrtcdn.be/radio1-high.mp3' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a vrt_%q -l 12000 -s -d ./out &
@@ -64,6 +66,8 @@ streamripper 'http://video.tvr.by:8000/radio1' -u 'iTunes/4.7 (Macintosh; N; PPC
 
 streamripper 'http://79.143.184.143:8000/listen.pls' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a 79143_%q -l 12000 -s -d ./out &
 
+streamripper 'http://sh2.upx.com.br:8012/listen.pls' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a upx_%q -l 12000 -s -d ./out &
+
 streamripper 'http://unlimited1-us.dps.live/cooperativafm/mp3/icecast.audio' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a cooperativafm_%q -l 12000 -s -d ./out &
 
 streamripper 'http://rs1.radiostreamer.com:8000/;stream/1' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a rs1_%q -l 12000 -s -d ./out &
@@ -73,6 +77,8 @@ streamripper 'https://icecast.teveo.icrt.cu/kHKL7tWd' -u 'iTunes/4.7 (Macintosh;
 streamripper 'https://drradio3-lh.akamaihd.net/i/p3_9@143506/index_256_a-p.m3u8' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a drradio3_%q -l 12000 -s -d ./out &
 
 streamripper 'http://icecast-streaming.nice264.com/ondaceroback' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a ondacero_%q -l 12000 -s -d ./out &
+
+streamripper 'http://19253.live.streamtheworld.com/W_RADIOAAC.aac' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a W_RADIOAAC_%q -l 12000 -s -d ./out &
 
 streamripper 'http://17513.live.streamtheworld.com/RG690_SC' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a RG690_%q -l 12000 -s -d ./out &
 
