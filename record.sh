@@ -120,7 +120,7 @@ streamripper 'http://rac1.radiocat.net/;' -u 'iTunes/4.7 (Macintosh; N; PPC)' --
 
 streamripper 'http://radiomars.ice.infomaniak.ch/radiomars-128.mp3' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a radiomars_%q -l 12000 -s -d ./out &
 
-sleep 60
+sleep 30
 
 while [[ $(ps -u admin  | grep ripper | grep -v grep | wc -l) -gt 0 ]]; do
   sleep 60
@@ -129,9 +129,9 @@ done
 rm -rf ./out/*.cue ./out/incomplete
 find ./out -size 0 | xargs -d '\n' rm -rf
 
-MDATE=$(date +%Y%m%d_%H%M%S)_$(wget -qO- ipinfo.io/ip)
-mv out out-$MDATE
-zip -r out-$MDATE.zip out-$MDATE
+## MDATE=$(date +%Y%m%d_%H%M%S)_$(wget -qO- ipinfo.io/ip)
+## mv out out-$MDATE
+## zip -r out-$MDATE.zip out-$MDATE
 
-source env.sh
+## source env.sh
 ## aws s3 cp out-$MDATE.zip s3://$AWS_S3_BUCKET/ --region us-east-1
