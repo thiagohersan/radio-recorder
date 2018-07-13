@@ -120,6 +120,8 @@ streamripper 'http://rac1.radiocat.net/;' -u 'iTunes/4.7 (Macintosh; N; PPC)' --
 
 streamripper 'http://radiomars.ice.infomaniak.ch/radiomars-128.mp3' -u 'iTunes/4.7 (Macintosh; N; PPC)' --xs-none -A -a radiomars_%q -l 12000 -s -d ./out &
 
+sleep 60
+
 while [[ $(ps -u admin  | grep ripper | grep -v grep | wc -l) -gt 0 ]]; do
   sleep 60
 done
